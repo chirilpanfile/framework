@@ -13,6 +13,7 @@ gulp.task('server',function(){
     })
 });
 
+
 gulp.task('styles',function(){
     return gulp.src("src/sass/**/*.+(scss|sass)")
         .pipe(sass({
@@ -34,7 +35,7 @@ gulp.task('styles',function(){
 
 gulp.task('watch',function(){
     gulp.watch("src/sass/**/*.+(sass|scss)",gulp.parallel('styles'))
-    gulp.watch("src/*.html").on('change',browserSync.reload);
+    gulp.watch("src/**/*").on('change',browserSync.reload);
 });
 
-gulp.task('def',gulp.parallel('watch','server','styles'))
+gulp.task('def',gulp.parallel('watch','styles'))

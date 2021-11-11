@@ -1,0 +1,20 @@
+// Dark
+$primary-color : #c1c8e4;
+$secondary-color : #84ceeb;
+$success-color : #5ab8eb;
+$mark-color : #5580e9;
+$hard-color: #482ff7;
+$danger-color : #8860d0;
+$bg-white : #ffffff;
+
+.ab-bg {
+    &__light {
+        background-color: $bg-white;
+        color: $danger-color;
+    }
+
+    &__dark {
+        background-color: #131313;
+        color: #f9d9f9;
+    }
+}

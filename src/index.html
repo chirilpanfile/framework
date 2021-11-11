@@ -1,14 +1,65 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="en" class="ab-html">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/src/css/style.min.css" />
     <title>Document</title>
-</head>
-<body>
-    1
+  </head>
+  <body class="ab-body">
+    <header class="ab-header ab-header-sticky">
+      <nav class="ab-nav ab-container">
+        <a href="#" class="ab-nav-logo">Abstract</a>
+        <ul class="ab-nav-menu">
+          <li class="ab-nav-item">
+            <a href="#" class="ab-nav-link">Link1</a>
+          </li>
+          <li class="ab-nav-item">
+            <a href="#" class="ab-nav-link">Link2</a>
+          </li>
+          <li class="ab-nav-item">
+            <a href="#" class="ab-nav-link">Link3</a>
+          </li>
+          <li class="ab-nav-item">
+            <a href="#" class="ab-nav-link">Link4</a>
+          </li>
+        </ul>
+        <div class="ab-hamburger">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+      </nav>
+    </header>
 
+    <div class="ab-wrapper ab-container">
+      <section class="ab-section" style="min-height: 60vh">
+        <div class="ab-section-wrapper" style="padding: 40px">
+          <h1 class="ab-title-1 center mb2">Abstract Tempate Page</h1>
+          <p class="ab-description center mb4">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloremque
+            velit debitis, voluptatibus ex dolores excepturi. Ipsum nulla
+            voluptates, eum tenetur eaque facilis? Voluptatem nobis temporibus,
+            eius dicta dignissimos iste <a class="link" href="">deleniti</a>.
+          </p>
+          <div class="ab-row center">
+            <button class="ab-btn ab-btn-default mr1 ml1 ">Default</button>
+            <button class="ab-btn ab-btn-primary mr1 ml1 ">Primary</button>
+            <button class="ab-btn ab-btn-succes mr1 ml1 ">Succes</button>
+            <div class="break"></div>
+            <button class="ab-btn ab-btn-default mr1 ml1 ">Default</button>
+            <button class="ab-btn ab-btn-primary mr1 ml1 ">Primary</button>
+            <button class="ab-btn ab-btn-succes mr1 ml1 ">Succes</button>
+          </div>
+        </div>
+      </section>
+    </div>
 
-</body>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="./javascript/index.js"></script>
+  </body>
 </html>
