@@ -27,10 +27,10 @@
 }
 .ab-row {
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
     align-items: center;
-    content: '';
+    justify-content: center;
+    flex-wrap: wrap;
+    height: inherit;
 }
 
 @import 'blocks/variables';
@@ -39,3 +39,5 @@
 @import 'blocks/text';
 @import 'blocks/shorts';
 @import 'blocks/button';
+@import 'blocks/card';
+@import 'blocks/carousel';

@@ -1,65 +1,232 @@
 <!DOCTYPE html>
+<!-- Important add class ab-html in the html tag -->
 <html lang="en" class="ab-html">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/src/css/style.min.css" />
-    <title>Document</title>
-  </head>
-  <body class="ab-body">
-    <header class="ab-header ab-header-sticky">
-      <nav class="ab-nav ab-container">
-        <a href="#" class="ab-nav-logo">Abstract</a>
-        <ul class="ab-nav-menu">
-          <li class="ab-nav-item">
-            <a href="#" class="ab-nav-link">Link1</a>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="/src/css/style.min.css" />
+  <title>Abstract</title>
+</head>
+<!-- Important add class ab-body in the body tag -->
+
+<body class="ab-body">
+  <!-- Creating a header -->
+  <header class="ab-header">
+    <!-- Add a inner container and make it row -->
+    <div class="ab-container ab-row" style="justify-content: space-between">
+      <!-- Logo -->
+      <div class="ab-logo">Abstract</div>
+      <!-- Important add the button below for the burger -->
+      <button type="button" class="ab-burger" id="burger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <!-- Important add the class ab-overlay for overlay in phone mode -->
+      <div class="ab-overlay" id="overlay"></div> 
+      <!-- Creating navigation -->
+      <nav class="ab-nav" id="navbar">
+        <!-- Creating navigation menu -->
+        <ul class="ab-menu">
+          <!-- Creating a menu item with a search bar in it -->
+          <li class="ab-menu-item">
+            <div class="ab-search">
+              <input type="" placeholder="Search..." />
+              <button><i class="fas fa-search"></i></button>
+            </div>
           </li>
-          <li class="ab-nav-item">
-            <a href="#" class="ab-nav-link">Link2</a>
+          <!-- Menu item -->
+          <li class="ab-menu-item"><a href="#">Home</a></li>
+          <li class="ab-menu-item"><a href="#">About Us</a></li>
+
+          <!-- Menu item with dropdown, add clas ab-menu-item-child -->
+          <li class="ab-menu-item ab-menu-item-child">
+            <!-- Create the toggle for submenu using data-togle -->
+            <a href="#" data-toggle="ab-sub-menu">
+              Services
+              <!-- Add this if u want to have animation from + > - -->
+              <div class="expand"></div>
+            </a>
+            <!-- Creating Sub Menu -->
+            <ul class="ab-sub-menu">
+              <li class="ab-menu-item"><a href="">Test</a></li>
+              <li class="ab-menu-item"><a href="">Test</a></li>
+              <li class="ab-menu-item"><a href="">Test</a></li>
+              <li class="ab-menu-item"><a href="">Test</a></li>
+              <li class="ab-menu-item"><a href="">Test</a></li>
+            </ul>
           </li>
-          <li class="ab-nav-item">
-            <a href="#" class="ab-nav-link">Link3</a>
-          </li>
-          <li class="ab-nav-item">
-            <a href="#" class="ab-nav-link">Link4</a>
+          <li class="ab-menu-item ab-menu-item-child">
+            <a href="#" data-toggle="ab-sub-menu">Planning </a>
+            <ul class="ab-sub-menu">
+              <li class="ab-menu-item"><a href="#">Basic</a></li>
+              <li class="ab-menu-item"><a href="#">Standard</a></li>
+              <li class="ab-menu-item"><a href="#">Premium</a></li>
+              <li class="ab-menu-item"><a href="#">Professional</a></li>
+            </ul>
           </li>
         </ul>
-        <div class="ab-hamburger">
-          <span class="bar"></span>
-          <span class="bar"></span>
-          <span class="bar"></span>
-        </div>
       </nav>
-    </header>
+    </div>
+  </header>
 
-    <div class="ab-wrapper ab-container">
-      <section class="ab-section" style="min-height: 60vh">
-        <div class="ab-section-wrapper" style="padding: 40px">
+  <!-- Main wrapper -->
+  <div class="ab-wrapper">
+    <!-- Adding background -->
+    <div class="bg" style="
+          background: url(https://i.pinimg.com/originals/92/94/1d/92941d986586249ee79a24065f68c910.jpg);
+        ">
+      <!-- Creating inner section with container -->
+      <section class="ab-section ab-container" style="min-height: 60vh">
+        <!-- Creating section wrapper -->
+        <div class="ab-section-wrapper">
+          <!-- Creating a title on center with margin bottom 0.5rem -->
           <h1 class="ab-title-1 center mb2">Abstract Tempate Page</h1>
+          <!-- Creating a p on center with margin bottom 1rem -->
           <p class="ab-description center mb4">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloremque
-            velit debitis, voluptatibus ex dolores excepturi. Ipsum nulla
-            voluptates, eum tenetur eaque facilis? Voluptatem nobis temporibus,
-            eius dicta dignissimos iste <a class="link" href="">deleniti</a>.
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+            Doloremque velit debitis, voluptatibus ex dolores excepturi. Ipsum
+            nulla voluptates, eum tenetur eaque facilis? Voluptatem nobis
+            temporibus, eius dicta dignissimos iste
+            <!-- simple link -->
+            <a class="link" href="">deleniti</a>.
           </p>
+          <!-- Creating a row and align it on center -->
           <div class="ab-row center">
-            <button class="ab-btn ab-btn-default mr1 ml1 ">Default</button>
-            <button class="ab-btn ab-btn-primary mr1 ml1 ">Primary</button>
-            <button class="ab-btn ab-btn-succes mr1 ml1 ">Succes</button>
-            <div class="break"></div>
-            <button class="ab-btn ab-btn-default mr1 ml1 ">Default</button>
-            <button class="ab-btn ab-btn-primary mr1 ml1 ">Primary</button>
-            <button class="ab-btn ab-btn-succes mr1 ml1 ">Succes</button>
+            <!-- creating a link button -->
+            <a href=""><button class="ab-btn ab-btn-smart mr1 ml1">
+                Get Started
+              </button></a>
           </div>
         </div>
       </section>
     </div>
 
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
-      referrerpolicy="no-referrer"
-    ></script>
-    <script src="./javascript/index.js"></script>
-  </body>
+    <section class="ab-section ab-container">
+      <div class="ab-section-wrapper">
+        <h1 class="ab-title-2 center mb4">Buttons</h1>
+        <div class="center">
+          <a href=""><button class="ab-btn ab-btn-default ml1 mr1">Default</button></a>
+          <a href=""><button class="ab-btn ab-btn-primary ml1 mr1">Primary</button></a>
+          <a href=""><button class="ab-btn ab-btn-success ml1 mr1">Succes</button></a>
+          <a href=""><button class="ab-btn ab-btn-smart ml1 mr1">Warning</button></a>
+          <a href=""><button class="ab-btn ab-btn-danger ml1 mr1">Danger</button></a>
+          <div class="break mb4"></div>
+          <a href=""><button class="ab-btn ab-btn-outline ab-btn-default ml1 mr1">Default</button></a>
+          <a href=""><button class="ab-btn ab-btn-outline ab-btn-primary ml1 mr1">Primary</button></a>
+          <a href=""><button class="ab-btn ab-btn-outline ab-btn-success ml1 mr1">Succes</button></a>
+          <a href=""><button class="ab-btn ab-btn-outline ab-btn-smart ml1 mr1">Warning</button></a>
+          <a href=""><button class="ab-btn ab-btn-outline ab-btn-danger ml1 mr1">Danger</button></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="ab-section ab-container">
+      <div class="ab-section-wrapper">
+        <h1 class="ab-title-2 center mb4">Cards</h1>
+        <div class="ab-row" style="justify-content: space-between;">
+          <div class="ab-card mb4 " style="width:360px; height: 160px;">
+            <img
+              src="./img/card-pc.png"
+              alt="">
+            <div class="ab-card-body">
+                <h2 class="ab-title-4 mb1">Card</h2>
+              <p class="ab-card-description">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro ipsa enim laboriosam eius! Optio, eaque.
+                <a href="" class="link db mt1">Open Page</a>
+              </p>
+            </div>
+          </div>
+          <div class="ab-card mb4" style="width: 360px; height: 160px;">
+            <img
+              src="./img/card-media.png"
+              alt="">
+            <div class="ab-card-body">
+                <h2 class="ab-title-4 mb1">Card</h2>
+              <p class="ab-card-description">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro ipsa enim laboriosam eius! Optio, eaque.
+                <a href="" class="link db mt1">Open Page</a>
+              </p>
+            </div>
+          </div>
+          <div class="ab-card mb4" style="width: 360px; height: 160px;">
+            <img
+              src="./img/card-data.png"
+              alt="">
+            <div class="ab-card-body vertical-center">
+                <h2 class="ab-title-4 mb1">Card</h2>
+              <p class="ab-card-description">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro ipsa enim laboriosam eius! Optio, eaque.
+                <br>
+                <a href="" class="link db mt1">Open Page</a>
+              </p>
+            </div>
+          </div>
+          <div class="ab-card mb4" style="height: 100px; width: 360px;">
+            <img src="./img/card-pc.png" alt="">
+            <div class="ab-card-body vertical-center">
+              <h2 class="ab-title-4 mb1">
+                Cards
+              </h2>
+              <p class="ab-card-description">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+              </p>
+            </div>
+          </div>
+          <div class="ab-card mb4" style="height: 100px; width: 360px;">
+            <img src="./img/card-media.png" alt="">
+            <div class="ab-card-body vertical-center">
+              <h2 class="ab-title-4 mb1">
+                Cards
+              </h2>
+              <p class="ab-card-description">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+              </p>
+            </div>
+          </div>
+          <div class="ab-card mb4" style="height: 100px; width: 360px;">
+            <img src="./img/card-data.png" alt="">
+            <div class="ab-card-body vertical-center">
+              <h2 class="ab-title-4 mb1">
+                Cards
+              </h2>
+              <p class="ab-card-description">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="ab-section ab-container">
+      <div class="ab-section-wrapper">
+        <h1 class="ab-title-2 center mb4">Carousel</h1>
+          <div class="ab-carousel">
+            <div class="ab-carousel-item">
+              <div class="image"><img src="https://wallpaperboat.com/wp-content/uploads/2021/03/16/71541/white-minimalist-21.jpg" alt="1"></div>
+            </div>
+            <div class="ab-carousel-item">
+              <div class="image"><img src="https://wallpaperforu.com/wp-content/uploads/2021/03/Wallpaper-Untitled-Minimalism-Triangle-Geometry-White27.jpg" alt="1"></div>
+            </div>
+            <div class="ab-carousel-item">
+              <div class="image"><img src="https://cdna.artstation.com/p/assets/images/images/003/233/510/large/nathan-timberlake-minimalism-wallpaper-4-1920x1080.jpg?1471421081" alt="1"></div>
+            </div>
+            <a class="prev"><i class="fas fa-angle-left"></i></a><a class="next"><i class="fas fa-angle-right"></i></a>
+          </div>
+      </div>
+    </section>
+
+  </div>
+
+  </div>
+
+
+  <!-- scripts -->
+  <script src="./javascript/fontpro.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" referrerpolicy="no-referrer"></script>
+  <script src="./javascript/index.js"></script>
+</body>
+
 </html>

@@ -1,5 +1,4 @@
 .ab-html {
-    height: 100%;
     font-size: 18px;
     line-height: 1.6;
     -webkit-transition: all 0.3s ease-in-out;
@@ -20,7 +19,6 @@
 
 .ab-body {
     position: relative;
-    height: 100%;
     margin: 0;
     padding: 0;
     scroll-behavior: smooth;
@@ -37,23 +35,30 @@
     -ms-flex-direction: column;
     flex-direction: column;
     min-height: 100vh;
+
 }
 
 .ab-body,
 .ab-html,
 .ab-wrapper {
-    height: 100%;
+    -webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	text-rendering: optimizeLegibility;
     width: 100%;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 .ab-section {
     width: 100%;
-    padding: 40px 20px;
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 20px 0;
+
+    @media screen and (max-width: 480px) {
+        padding: 20px 16px;
+    }
 }
 
 .ab-section-wrapper {
@@ -67,4 +72,28 @@
 .break{
     display: block;
     margin-bottom: 0.75rem;
+}
+
+.bg {
+    background: center center/cover no-repeat;
+}
+
+.db{
+    display: block;
+}
+
+.d-none {
+    @media screen and (max-width: 768px) {
+        display: none !important;
+    }
+}
+.vertical-center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.text-center {
+    margin: 0 auto;
+    text-align: center;
 }

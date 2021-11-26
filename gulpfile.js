@@ -4,6 +4,8 @@ const sass = require("gulp-sass")(require("sass"));
 const rename = require("gulp-rename");
 const autoPrefixer = require("gulp-autoprefixer");
 const cleanCSS = require("gulp-clean-css");
+const imagemin = require("gulp-imagemin");
+const cache = require("gulp-cache");
 
 gulp.task('server',function(){
     browserSync.init({
@@ -13,6 +15,12 @@ gulp.task('server',function(){
     })
 });
 
+gulp.task('cleanImg',function() {
+    return gulp.src('src/img/**/*.+(png|jpg|jpeg|gif|svg)')
+        .pipe(cache(imagemin({
+            interlaced : true,
+        })))
+})
 
 gulp.task('styles',function(){
     return gulp.src("src/sass/**/*.+(scss|sass)")
